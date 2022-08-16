@@ -1,0 +1,114 @@
+Today's topics covered:
+
+1) Notes on JavaScript:
+   What is javascript?
+
+  JavaScript is a programming language used with HTML, for making pages alive and user interactive.
+
+  JavaScript actually executes on the front end side of Webpage with HTML, CSS.
+
+  JavaScript is called Client Side Scripting, so, it requires no more such server or software like PHP, it runs in an HTML page with the help of Web browser.
+
+  User event in JavaScript:
+    User events are some keywords used with HTML Elements for interacting between users and JavaScript Function.
+
+    List of common events with their purpose in JavaScript:
+
+    onclick= User Single Click on an element [button, textbox, image, para] to execute JavaScript Code.
+
+    ondblclick= User Double Click on an element [button, textbox, image, para] to execute JavaScript Code.
+
+    onmouseover= User move the mouse pointer on an element [button, textbox, image, para] to execute JavaScript Code.
+
+  onmouseout= User release the mouse pointer from an element [button, textbox, image, para] to execute JavaScript Code.
+
+2) Display Popup messages in JavaScript:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<input type="button" value="SHOW" onclick="abc()">
+<script>
+function abc() // user defined function
+{
+alert("Hello JavaScript");
+// alert()=Show a message in alertbox or popupbox.
+ confirm("Good Morning!");
+// confirm()=Show a message as like confirmation.
+}
+</script>
+</body>
+</html>
+image.png
+3) Use of variable by External javaScript:
+     var1.html
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<input type="button" value="VARIABLES" ondblclick="mno()">
+<script src="xy.js"></script>
+<!-- Above line is used for link up with External JavaScript
+ -->
+</body>
+</html>
+   xy.js
+function mno()
+{
+var a=2;// numeric varible
+// var used for define a variable
+var b="Hello"; // String variable
+var c=4.7;
+alert(a+","+b+","+c);
+// here + used for concatenation
+}
+image.png
+4) Use of Plus Operator in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<input type="button" value="PLUS OPERATOR" onclick="xyz()">
+<script>
+function xyz()
+{
+alert(2+5); // 7  summation
+alert("2"+5); //25 concatenate
+alert(2+"5"); //25 concatenate
+alert("2"+"5"); // 25 concatenate
+alert("2+5");
+alert(5-2); // such no issue for minus, it always subtract whether it string or number.
+alert("5"-"2");
+}
+</script>
+</body>
+</html>
+
+5) Data input in textbox and display into a messagebox in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+Enter text:
+<input type="text" id="t1">
+<input type="button" value="SHOW" onclick="mno()">
+<script>
+function mno()
+{
+var a=document.getElementById("t1").value;
+//getElementById() used for detect html element by ID
+alert("Hii "+a);
+}
+</script>
+</body>
+</html>
+image.png

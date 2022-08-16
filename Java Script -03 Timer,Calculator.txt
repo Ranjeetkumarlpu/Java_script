@@ -1,0 +1,162 @@
+Dear Students,
+  So, as I discussed, I uploaded a video on the basis of today's session in Google Drive. The link is as follows, you can view or download the videos for your revision and practice purpose.
+
+Video Link: https://drive.google.com/file/d/1VQFFp93bqIsHSab-TyTq5IjeG4n4IW82/view?usp=sharing
+
+And, also I am giving the notes and Code & output of HTML Files within this mailbox directly which I did in today's class session.
+
+I already uploaded the day-wise classwork along with a coding file, notes and related items in a shared folder, which I sent a link previously, to keep it checked.
+
+Whether facing any problem regarding class learning process and class material, kindly mail to me in my email id "adey.edunet@gmail.com", I will be answered.
+
+Today's topics covered:
+
+1) Stopwatch program in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<span id="timebox">0</span><br>
+<input type="button" value="START" onclick="jkl()">
+<input type="button" value="STOP" onclick="mno()">
+<script>
+var i=1;
+var p;
+function asd()
+{
+
+if(i>10)
+{
+clearTimeout(p);
+alert("Times up!!");
+i=0;
+document.getElementById("timebox").innerHTML=i;
+}
+else
+{
+document.getElementById("timebox").innerHTML=i;
+i=i+1; // i++;
+// innerHTML=Used for show value inside span, paragraph, div.
+}
+}
+
+function jkl()
+{
+p=setInterval(asd,1000); // 1000 miliseconds= 1 second
+// setInterval(functionname,time in miliseconds)= Used for execute a function multiple times within specific time interval
+}
+
+function mno()
+{
+clearTimeout(p);
+// clearTimeout()=used for stop the running timer
+}
+</script>
+</body>
+</html>
+image.png
+
+2) Color change by checkbox in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+#d1
+{
+height:300px;
+width:300px;
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<input type="checkbox" id="chkred" onchange="cc()">RED
+<!-- onchange is an event used with checkbox or radio button to execute javascript function by depends on checked or unchecked. -->
+<br>
+<div id="d1">
+</div>
+<script>
+function cc()
+{
+if(document.getElementById("chkred").checked==true)
+{
+document.getElementById("d1").style.background="red";
+}
+else
+{
+document.getElementById("d1").style.background="white";
+}
+
+}
+</script>
+</body>
+</html>
+image.png
+3) Textarea value copy by checkbox and onkeyup event in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+Residential Address:
+<textarea id="txtres" rows=5 cols=30 onkeyup="abc()"></textarea>
+
+<!-- onkeyup is an event used with textbox or textarea for execute javascript function by depend on text input -->
+<br>
+<input type="checkbox" id="chk" onchange="abc()">Same as above
+<br>
+Permanent Address:
+<textarea id="txtper" rows=5 cols=30></textarea>
+<br>
+<script>
+function abc()
+{
+var r=document.getElementById("txtres").value;
+
+if(document.getElementById("chk").checked==true)
+{
+document.getElementById("txtper").value=r;
+}
+else
+{
+document.getElementById("txtper").value="";
+}
+}
+</script>
+</body>
+</html>
+image.png
+
+4) Evaluate maths equation by single textbox in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+Enter the calculation:
+<input type="text" id="txtcalc">
+<input type="button" value="Calculation" onclick="abc()">
+<script>
+function abc()
+{
+var a=eval(document.getElementById("txtcalc").value);
+// eval() is used for calculating the user give equation.
+document.getElementById("txtcalc").value=a;
+}
+</script>
+</body>
+</html>
+image.png
+   
+5) PHP-MySQL Project work for Day 3 given and mentioned in following sheet:
+
+Open the sheet, by clicking on the link below:
+    
+https://docs.google.com/spreadsheets/d/1IWgcBT4hMLI764eJRFroTIXVPVvs2JK_vIk0TeeFfpY/edit?usp=sharing     
+
+__________________________

@@ -1,0 +1,193 @@
+Today's topics covered:
+
+1) Picture select from dropdown menu in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+Select Photo:
+<select onchange="abc()" id="menu">
+<option></option>
+<option>Desert.jpg</option>
+<option>Koala.jpg</option>
+<option>Lighthouse.jpg</option>
+</select>
+<br><br>
+<img src="" id="pics" height="200px" width="400px"></img>
+<script>
+function abc()
+{
+var a=document.getElementById("menu").value;
+document.getElementById("pics").src=a;
+}
+</script>
+</body>
+</html>
+image.png
+2) Picture Slideshow in JavScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body onload="autoslide()">
+<!-- onload used for execute javascript function when the webpage loaded -->
+<img src="1.jpg" id="pic" height="200px" width="400px"></img>
+<br>
+<input type="button" value="Next" onclick="nextpic()">
+<input type="button" value="SlideShow" onclick="autoslide()">
+<script>
+var a=1;
+function nextpic()
+{
+if(a>=3)
+{
+a=1;
+}
+else
+{
+a=a+1;
+}
+
+document.getElementById("pic").src=a+".jpg";
+}
+
+function autoslide()
+{
+setInterval(nextpic,3000);
+}
+</script>  
+</body>
+</html>
+image.png
+3) Array display by for loop in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<input type="button" value="SHOW ARRAY" onclick="arrshow()">
+<script>
+function arrshow()
+{
+var b=["Hello",23,98.45,"23AD"]; // array value
+
+for(var i=0;i<4;i=i+1)
+{
+alert(b[i]);
+}
+}
+</script>
+</body>
+</html>
+image.png
+4) Pick textbox value from an user form in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form method="post" name="frm">
+Name:
+<input type="text" name="txtname">
+<br>
+<input type="button" value="SHOW NAME" onclick="aaa()">
+</form>
+<script>
+function aaa()
+{
+var a=document.frm.txtname.value;
+alert(a);
+}
+</script>
+</body>
+</html>
+image.png
+5) Form validation by JavaScript:
+userform.php
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form action="nextpage.php" name="f1" method="post" onsubmit="return xyz()">
+<!-- onsubmit event is used with form and response by click on Submit button to execute javascript function -->
+Name:
+<input type="text" name="txtname">
+<br>
+Address:
+<textarea name="txtaddress"></textarea>
+<br>
+Gender:
+<input type="radio" value="Male" name="txtgender">Male
+<input type="radio" value="Female" name="txtgender">Female
+<br>
+Religion:
+<select name="txtreli">
+<option></option>
+<option>Hindu</option>
+<option>Muslim</option>
+<option>Christan</option>
+</select>
+<br>
+<input type="submit" name="btnsubmit" value="Sign UP">
+</form>
+<script>
+function xyz()
+{
+if(document.f1.txtname.value=="")
+{
+alert("name should not be blank");
+return false; // to stay in the form, not to submit
+}
+else if(document.f1.txtaddress.value=="")
+{
+alert("Address should not be blank");
+return false; // to stay in the form, not to submit
+}
+else if(document.f1.txtgender.value=="")
+{
+alert("Select any gender");
+return false; // to stay in the form, not to submit
+}
+else if(document.f1.txtreli.value=="")
+{
+alert("Select any religion");
+return false; // to stay in the form, not to submit
+}
+else
+{
+return true; // to submit the form
+}
+}
+</script>
+</body>
+</html>
+image.png
+nextpage.php
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<?php
+echo "Name=".$_POST["txtname"]."<br>";
+echo "Address=".$_POST["txtaddress"]."<br>";
+echo "Gender=".$_POST["txtgender"]."<br>";
+echo "Religion=".$_POST["txtreli"]."<br>";
+?>
+</body>
+</html>
+image.png
+
+6) PHP-MySQL Project work for Day 3 already given in previous day and mentioned in following sheet:
+
+Open the sheet, by clicking on the link below:
+    
+https://docs.google.com/spreadsheets/d/1IWgcBT4hMLI764eJRFroTIXVPVvs2JK_vIk0TeeFfpY/edit?usp=sharing     

@@ -1,0 +1,75 @@
+Today's topics covered:
+
+1) Notes on JavaScript:
+   Classification of JavaScript:
+
+There will be two types of JavaScript till the date.
+
+1) Classic or Native JavaScript:  The classic or Native JavaScript is the Old JavaScript that executes in the client browser with HTML Page. This is a parent javascript, later many javascript versions are developed from it.
+  Classic or native javascript is a client side scripting.
+
+2) Modern or Extended JavaScript: The Modern or Extended JavaScript is the new one JavaScript that executes in server by the help of other software, but it comes from the native or classic javascript. By modern javascript, you can do server side operation and database connectivity like PHP.
+ Modern or Extended JavaScript is a server side scripting.
+ Example: NodeJS is a Modern JavaScript.
+
+ 2) Sum of 2 Nos. in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+Enter 1st number:
+<input type="text" id="t1">
+<br>
+Enter 2nd number:
+<input type="text" id="t2">
+<br>
+<input type="button" value="SUM" onclick="ss()">
+<br>
+SUM:<input type="text" id="txtsum">
+<script>
+function ss()
+{
+var a=parseInt(document.getElementById("t1").value);
+// parseInt() used for convert data into number
+var b=parseInt(document.getElementById("t2").value);
+var c=a+b;
+document.getElementById("txtsum").value=c;
+}
+</script>
+</body>
+</html>
+image.png
+
+3) Text highlight by Mouseover and Mouseover Event in JavaScript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<span id="sp" onmouseover="abc()" onmouseout="xyz()">TEXT</span>
+<script>
+function abc()
+{
+document.getElementById("sp").style.background="yellow";
+document.getElementById("sp").style.fontSize="40px";
+}
+
+function xyz()
+{
+document.getElementById("sp").style.background="white";
+document.getElementById("sp").style.fontSize="15px";
+}
+</script>
+
+</body>
+</html>
+javstext.gif
+
+4) PHP-MySQL Project work for Day 2 given and mentioned in following sheet:
+
+Open the sheet, by clicking on the link below:
+    
+https://docs.google.com/spreadsheets/d/1IWgcBT4hMLI764eJRFroTIXVPVvs2JK_vIk0TeeFfpY/edit?usp=sharing     

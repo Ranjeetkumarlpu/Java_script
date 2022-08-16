@@ -1,0 +1,155 @@
+Today's topics covered:
+
+1) Picture Slideshow with progressbar and mouseover to stop effect in Javascript:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+#progress
+{
+width:400px;
+}
+
+#percen
+{
+width:400px;
+text-align:center;
+}
+</style>
+</head>
+<body onload="autoslide()">
+<!-- onload used for execute javascript function when the webpage loaded -->
+<img src="1.jpg" id="pic" height="200px" width="400px" onmouseover="picstop()" onmouseout="autoslide()"></img>
+<br>
+<meter id="progress" max="100" min="0" value="25"></meter>
+<br>
+<div id="percen">25%</div>
+<input type="button" value="Next" onclick="nextpic()">
+<input type="button" value="SlideShow" onclick="autoslide()">
+<script>
+var a=1,p=25;
+var t;
+function nextpic()
+{
+if(a>=4)
+{
+a=1;
+p=25;
+}
+else
+{
+a=a+1;
+p=p+25;
+}
+
+document.getElementById("pic").src=a+".jpg";
+document.getElementById("progress").value=p;
+document.getElementById("percen").innerHTML=p+"%";
+}
+
+function autoslide()
+{
+t=setInterval(nextpic,3000);
+}
+
+function picstop()
+{
+clearTimeout(t);
+}
+</script>  
+</body>
+</html>
+image.png
+
+2) Multiple checkbox value display & form validation in JavaScript:
+  ckquali.php
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form name="frm1" action="nextpage.php" method="post" onsubmit="return xyz()">
+Name:
+<input type="text" name="txtnm">
+<br>
+Email:
+<input type="email" required>
+<br>
+Select Qualification:
+<input type="checkbox" value="BCA" name="qu" onchange="showquali()">BCA
+<input type="checkbox" value="MCA" name="qu" onchange="showquali()">MCA
+<input type="checkbox" value="BSC" name="qu" onchange="showquali()">BSC
+<input type="checkbox" value="MSC" name="qu" onchange="showquali()">MSC
+<br>
+<span id="sp"></span>
+<br>
+<input type="text" name="txtqu" style="display:none">
+<br>
+<!-- <input type="button" value="SHOW" onclick="showquali()"> -->
+<input type="submit" value="PROCEED">
+</form>
+<script>
+var c=0;
+function showquali()
+{
+var s="";
+
+for(var i=0;i<document.frm1.qu.length;i=i+1)
+{
+if(document.frm1.qu[i].checked==true)
+{
+//alert(document.frm1.qu[i].value);
+s=s+" "+document.frm1.qu[i].value// s= MCA MSC
+c=c+1;
+}
+
+}
+document.getElementById("sp").innerHTML=s;
+document.frm1.txtqu.value=s;
+// alert(c);
+}
+
+function xyz()
+{
+if(document.frm1.txtnm.value=="")
+{
+alert("Name must not be blank");
+return false;
+}
+else if(c==0) // not checked any checkbox
+{
+alert("Atleast select one qualification");
+return false;
+}
+else
+{
+alert("Form successfully filled-up");
+return true;
+}
+}
+</script>
+</body>
+</html>
+image.png
+ nextpage.php
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<?php
+echo "NAME=".$_POST["txtnm"]."<br>";
+echo "Qualification=".$_POST["txtqu"]."<br>";
+
+?>
+</body>
+</html>
+image.png
+3) PHP-MySQL Project work for Day 4 and mentioned in following sheet:
+
+Open the sheet, by clicking on the link below:
+    
+https://docs.google.com/spreadsheets/d/1IWgcBT4hMLI764eJRFroTIXVPVvs2JK_vIk0TeeFfpY/edit?usp=sharing     
